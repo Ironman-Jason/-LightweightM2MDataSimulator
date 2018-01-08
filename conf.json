@@ -1,0 +1,139 @@
+{
+    "nbi_app_services": [
+        {
+            "app_name": "landslide",
+            "host": "127.0.0.1",
+            "port": "9908",
+            "callback_url": "/callback/report",
+            "devices": [
+                {
+                    "device_name": "GateWay",
+                    "device_sn": "asdflasdf3214",
+                    "resource": [
+                        {
+                            "resource_name": "ResourcePath_Gateway_Light",
+                            "resource_path": "33/0/0",
+                            "value_format": "*",
+                            "value_candidates": [0,1],
+                            "value_range": []
+                        },
+                        {
+                            "resource_name": "ResourcePath_Gateway_Loudspeaker",
+                            "resource_path": "33/0/1",
+                            "value_format": "*",
+                            "value_candidates": [0,1],
+                            "value_range": []
+                        },
+                        {
+                            "resource_name": "ResourcePath_Gateway_Period",
+                            "resource_path": "33/0/2",
+                            "value_format": "*",
+                            "value_candidates": [],
+                            "value_range": []
+                        },
+                        {
+                            "resource_name": "ResourcePath_Gateway_Battery",
+                            "resource_path": "33/0/3",
+                            "value_format": "*",
+                            "value_candidates": [],
+                            "value_range": [0, 100]
+                        },
+                        {
+                            "resource_name": "ResourcePath_Gateway_GPS",
+                            "resource_path": "33/0/5",
+                            "value_format": "{*,*}",
+                            "value_candidates": [],
+                            "value_range": [45, 67]
+                        },
+                        {
+                            "resource_name": "ResourcePath_Gateway_SubNodeState",
+                            "resource_path": "33/0/9",
+                            "value_format": "{*,*,*,*,*,*,*,*,*,*,*,*}",
+                            "value_candidates": [0, 1, 2],
+                            "value_range": []
+                        }
+                    ]
+                },
+                {
+                    "device_name": "Node",
+                    "device_sn": "asdflasdf3214",
+                    "resource": [
+                        {
+                            "resource_name": "ResourcePath_Node_Serial_Number",
+                            "resource_path": "34/*/0",
+                            "resource_path_variable_candidates": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                            "value_format": "*",
+                            "value_candidates": [],
+                            "value_range": []
+                        },
+                        {
+                            "resource_name": "ResourcePath_Node_Battery",
+                            "resource_path": "34/*/1",
+                            "resource_path_variable_candidates": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                            "value_format": "*",
+                            "value_candidates": [],
+                            "value_range": [0, 100]
+                        },
+                        {
+                            "resource_name": "ResourcePath_Node_Signal_Intensity",
+                            "resource_path": "34/*/2",
+                            "resource_path_variable_candidates": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                            "value_format": "*",
+                            "value_candidates": [],
+                            "value_range": []
+                        },
+                        {
+                            "resource_name": "ResourcePath_Node_Angle",
+                            "resource_path": "34/*/5",
+                            "resource_path_variable_candidates": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                            "value_format": "{*,*,*}",
+                            "value_candidates": [],
+                            "value_range": [0, 360]
+                        },
+                        {
+                            "resource_name": "ResourcePath_Node_Vibration",
+                            "resource_path": "34/*/6",
+                            "resource_path_variable_candidates": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                            "value_format": "{*,*,*,*,*}",
+                            "value_candidates": [],
+                            "value_range": []
+                        },
+                        {
+                            "resource_name": "ResourcePath_Node_Tilt",
+                            "resource_path": "34/*/7",
+                            "resource_path_variable_candidates": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                            "value_format": "{*,*,*,*,*}",
+                            "value_candidates": [],
+                            "value_range": []
+                        },
+                        {
+                            "resource_name": "ResourcePath_Node_Shock",
+                            "resource_path": "34/*/8",
+                            "resource_path_variable_candidates": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                            "value_format": "{*,*,*,*,*}",
+                            "value_candidates": [],
+                            "value_range": []
+                        },
+                        {
+                            "resource_name": "ResourcePath_Node_GPS",
+                            "resource_path": "34/*/9",
+                            "resource_path_variable_candidates": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                            "value_format": "{*,*}",
+                            "value_candidates": [],
+                            "value_range": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "app_name" : "smart_lighting_pole",
+            "host" : "127.0.0.1",
+            "port" : "9906",
+            "callback_url" : "/callback/report",
+            "devices": []
+        }
+    ],
+    "log_file": "report_data_simulator.log",
+    "sending_interval": 2
+}
