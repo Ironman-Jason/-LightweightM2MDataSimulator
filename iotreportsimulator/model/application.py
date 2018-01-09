@@ -34,8 +34,11 @@ class Application:
         return report
 
     def send_report(self, report):
-        url = "http://" + self.host + ":" + self.port + self.callback_url
-        headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
-        params = json.dumps(report)
-        result = requests.post(url, headers=headers, data=params)
-        logging.debug(result)
+        try:
+            url = "http://" + self.host + ":" + self.port + self.callback_url
+            headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+            params = json.dumps(report)
+            result = requests.post(url, headers=headers, data=params)
+            logging.debug(result)
+        except IOError as e:
+            logging.info(e)
