@@ -26,7 +26,7 @@ class Resource:
     def generate_resource_path(self):
         if "*" not in self.resource_path:
             return self.resource_path
-        if len(self.resource_path_variable_candidates) is not 0:
+        if self.resource_path_variable_candidates:
             index = random.randint(0, len(self.resource_path_variable_candidates) - 1)
             candidate = self.resource_path_variable_candidates[index]
             return self.resource_path.replace('*', str(candidate))
@@ -34,14 +34,14 @@ class Resource:
             return self.resource_path.replace('*', str(random.randint(0, 100)))
 
     def generate_value(self):
-        if len(self.value_candidates) is not 0:
+        if self.value_candidates:
             index = random.randint(0, len(self.value_candidates) - 1)
             candidate = self.value_candidates[index]
             return self.value_format.replace('*', str(candidate))
         if len(self.value_range) >= 2:
             value = random.randint(self.value_range[0], self.value_range[1])
             return self.value_format.replace('*', str(value))
-        if len(self.value_range) is 0:
+        if not self.value_range:
             return self.value_format.replace('*', str(random.randint(0, 100)))
 
     def generate_timestamp(self):
