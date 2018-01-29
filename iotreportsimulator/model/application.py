@@ -27,7 +27,7 @@ class Application:
             self.send_report(report=report)
 
     def generate_report(self):
-        if len(self.devices_list) is 0:
+        if not self.devices_list:
             return None
         index = random.randint(0, len(self.devices_list) - 1)
         report = self.devices_list[index].generate_report()
