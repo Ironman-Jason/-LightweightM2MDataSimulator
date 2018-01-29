@@ -15,7 +15,7 @@ class Device:
         self.resource_list = resource_list
 
     def generate_report(self):
-        if len(self.resource_list) is 0:
+        if not self.resource_list:
             return None
         index = random.randint(0, len(self.resource_list) - 1)
         report = self.resource_list[index].generate_callback_notification(device_sn=self.device_sn)
